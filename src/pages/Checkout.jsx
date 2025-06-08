@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "../firebase/Config";
+import { db } from "../firebase/config";
 
 function Checkout() {
   const { cart, clearCart } = useContext(CartContext);

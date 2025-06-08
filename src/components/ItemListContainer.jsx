@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebase/Config";
+import { db } from "../firebase/config";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 

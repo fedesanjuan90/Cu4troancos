@@ -1,0 +1,469 @@
+@charset "UTF-8";
+
+/* Variables */
+$primary-font: "Shadows Into Light";
+$primary-font-size: 120%;
+$line-height: 1.6;
+$background-color: #f4f4f4;
+$header-background: #d2d1d4;
+$header-color: white;
+$nav-link-color: rgb(35, 58, 55);
+$nav-link-hover: #ff9800;
+$footer-background: #333;
+$footer-color: white;
+
+/* Estilos globales para todas las páginas */
+body {
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+  line-height: $line-height;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: $header-background;
+  color: $header-color;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo-container {
+    margin-right: 20px;
+  }
+
+  .logo {
+    max-height: 120px;
+  }
+
+  nav {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+
+      li {
+        margin-right: 1em;
+
+        a {
+          color: $nav-link-color;
+          text-decoration: none;
+          padding: 0.5em 1em;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: $nav-link-hover;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .logo-container {
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
+
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+
+        li {
+          margin-right: 0;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+.contacto-main {
+  margin: 20px; /* Ajusta el margen según tus necesidades */
+}
+
+h2 {
+  text-decoration: underline;
+  font-size: 40px;
+}
+
+footer {
+  background-color: $footer-background;
+  color: $footer-color;
+  text-align: center;
+  padding: 1em 0;
+  width: 100%;
+  bottom: 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Estilos específicos para la página de inicio */
+.home-main {
+  padding: 2rem 1rem;
+}
+
+.about,
+.features {
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: center;
+  border: 1.2px solid #333333;
+  border-radius: 8px;
+  padding: 1.5rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0 1rem;
+  }
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+
+  .feature-item {
+    flex-basis: calc(50% - 20px);
+    border: 1px solid #b9b8b8;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(47, 11, 131, 0.1);
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #ecebeb;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .descripcion {
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+
+      h3 {
+        margin-top: 0;
+        font-size: 1.2em;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 0.9em;
+        color: #030303;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about,
+  .features,
+  .bebidas-main,
+  .market-main,
+  .club-main {
+    padding: 1em;
+  }
+}
+
+/* Estilos específicos para la página de bebidas */
+.bebidas-main {
+  padding: 2em;
+  text-align: center;
+
+  .bebidas-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: inline-block;
+    width: 30%; /* Ajuste según el diseño y el margen */
+    margin-right: 20px; /* Espacio entre las imágenes */
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .descripcion {
+      padding: 10px;
+      background-color: #f9f9f9;
+
+      h3 {
+        margin-top: 0;
+        font-size: 1.2em;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 0.9em;
+        color: #666;
+      }
+    }
+  }
+}
+
+/* Estilos específicos para la página de market */
+.market-main {
+  padding: 2em;
+  text-align: center;
+
+  .market-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: inline-block;
+    width: 30%; /* Ajuste según el diseño y el margen */
+    margin-right: 20px; /* Espacio entre las imágenes */
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .descripcion {
+      padding: 10px;
+      background-color: #f9f9f9;
+
+      h3 {
+        margin-top: 0;
+        font-size: 1.2em;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 0.9em;
+        color: #666;
+      }
+    }
+  }
+}
+
+/* Estilos específicos para la página del club */
+.club-main {
+  padding: 2em;
+  text-align: center;
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    button {
+      background-color: #ff9800;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #555;
+      }
+    }
+  }
+}
+
+/* Estilos para el botón de WhatsApp */
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  a {
+    display: block;
+    background-color: #25d366;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #128c7e;
+    }
+
+    img {
+      width: 24px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+  }
+}
+
+.carousel-container {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .img-carousel {
+    width: 30%;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+
+    .img-carousel {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/* Estilos adicionales para la página de inicio y otras páginas */
+.welcome {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  font-size: x-large;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1rem 0;
+
+  input[name=slides] {
+    display: none;
+  }
+
+  .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+    .carousel-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 50%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  #slide1:checked ~ .carousel-slides {
+    transform: translateX(0%);
+  }
+
+  #slide2:checked ~ .carousel-slides {
+    transform: translateX(-100%);
+  }
+
+  #slide3:checked ~ .carousel-slides {
+    transform: translateX(-200%);
+  }
+
+  .carousel-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    label {
+      cursor: pointer;
+      padding: 0.5rem;
+      margin: 0 0.5rem;
+      background-color: #333;
+      color: #fff;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #555;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+
+    .carousel-slide img {
+      max-width: 80%;
+    }
+
+    .carousel-navigation label {
+      padding: 0.25rem;
+      margin: 0 0.25rem;
+    }
+  }
+}
+
+/* Estilo "shadow into night" */
+.shadow-into-night {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
